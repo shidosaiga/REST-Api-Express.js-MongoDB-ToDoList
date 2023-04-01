@@ -17,5 +17,28 @@ router.get('/:id', (req, res, next) => {
     })
 })
 
+router.post('/', (req, res, next) => {
+    Todolist.create(req.body, (err, post) => {
+        if (err) return next(err);
+        res.json(post);
+    })
+})
+
+router.put('/:id', (req, res, next) => {
+    Todolist.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
+        if (err) return next(err);
+        res.json(post);
+    })
+})
+
+router.delete('/:id', (req, res, next) => {
+    Todolist.findByIdAndDelete(req.params.id, (err, post) => {
+        if (err) return next(err);
+        res.json(post);
+    })
+})
+
+
+
 
 module.exports = router;
