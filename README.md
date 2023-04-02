@@ -48,3 +48,14 @@ REST-Api Express.js MongoDB ToDoList
 และ ทำการ  Get todolists
 http://localhost:3000/todolists
 
+#### การ post ข้อมูล เลือกใส่ในสรามารถสร้างใน body เลือก Form-encode หรือ json
+
+ตัวอย่าง File json
+```sh
+    {
+    "todo_task": "ทำการบ้านก่อนนอน",
+    "todo_completed": true // flase
+    }
+    
+```
+
