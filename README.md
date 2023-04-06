@@ -43,7 +43,7 @@ REST-Api Express.js MongoDB ToDoList
       "PORT": 3000 //  you can change port
     }
 ```
-#### ตัว Rest Api ทำสอบได้จาก Extensions Thunder Client
+#### ตัว Rest Api สามารถทดสอบได้จาก Extensions Thunder Client
 นำ http://localhost:3000 ไปเปิดใน Thunder Client
 และ ทำการ  Get todolists
 http://localhost:3000/todolists
