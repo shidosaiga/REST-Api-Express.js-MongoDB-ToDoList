@@ -5,11 +5,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+
+
 const debug = require('debug')('app')
 const PORT = process.env.PORT;
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://admin:1234@cluster0.8jpfeja.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://admin:1234@cluster0.kclgow9.mongodb.net/?retryWrites=true&w=majority')
         .then(() => console.log('connection successfully!'))
         .catch((err) => console.error(err))
 
