@@ -10,7 +10,7 @@ router.get('/', async (req, res, next) => {
     // })
     const todoLists = await Todolist.find({}) ;  //New mongoose version script
     res.json(todoLists);
-})
+});
 
 router.get('/:id', async (req, res, next) => {
     // Todolist.findById(req.params.id, (err, post) => {
@@ -19,7 +19,7 @@ router.get('/:id', async (req, res, next) => {
     // })
     const todoFindById = await Todolist.findById(req.params.id);
     res.json(todoFindById);
-})
+});
 
 router.post('/', async (req, res, next) => {
     // Todolist.create(req.body, (err, post) => {
@@ -29,7 +29,7 @@ router.post('/', async (req, res, next) => {
 
     const todoCreate = await Todolist.create(req.body);
     res.json(todoCreate);
-})
+});
 
 router.put('/:id', async (req, res, next) => {
     // Todolist.findByIdAndUpdate(req.params.id, req.body, (err, post) => {
@@ -39,7 +39,7 @@ router.put('/:id', async (req, res, next) => {
 
     const todoUpdate = await Todolist.findByIdAndUpdate(req.params.id, req.body);
     res.json(todoUpdate);
-})
+});
 
 router.delete('/:id',async (req, res, next) => {
     // Todolist.findByIdAndDelete(req.params.id, (err, post) => {
@@ -50,9 +50,6 @@ router.delete('/:id',async (req, res, next) => {
     const todoDelete = await Todolist.findByIdAndRemove(req.params.id);
     res.json(todoDelete);
 
-})
-
-
-
+});
 
 module.exports = router;
